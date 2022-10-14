@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body{
+  background-color: #000;
+}
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.random_number{
+  background-color: #fff;
+  display: flex;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14rem;
+  color: #000;
+}
+.show{
+  color: rgba(0, 0, 0, 0.1);
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  font-size: 14rem;
+  animation: counter 1s infinite alternate ease-in-out;
+  counter-reset: num var(--num); 
+}
+.show::after {
+  content: counter(num);
+}
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 10;
+  }
 }
