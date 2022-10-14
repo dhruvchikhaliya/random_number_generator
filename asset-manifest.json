@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/random_number_generator/static/css/main.cabf78d4.css",
+    "main.js": "/random_number_generator/static/js/main.9c088240.js",
+    "index.html": "/random_number_generator/index.html",
+    "main.cabf78d4.css.map": "/random_number_generator/static/css/main.cabf78d4.css.map",
+    "main.9c088240.js.map": "/random_number_generator/static/js/main.9c088240.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cabf78d4.css",
+    "static/js/main.9c088240.js"
+  ]
+}
